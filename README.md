@@ -12,9 +12,8 @@ Features
 
 Technologies Used
 
-    Frontend: HTML, CSS, JavaScript, and React
+    Frontend: SCSS, JavaScript, and React
     Styling: Bootstrap for layout and responsive components, custom CSS for additional styling
-    Backend: [Specify if applicable, e.g., Node.js, Firebase]
     Version Control: Git and GitHub
 
 Getting Started
