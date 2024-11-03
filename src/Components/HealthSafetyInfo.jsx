@@ -1,6 +1,5 @@
-import  { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
-
+import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HealthSafetyInfo = () => {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -13,7 +12,7 @@ const HealthSafetyInfo = () => {
     },
     {
       title: 'Post-Donation Care',
-      content: 'After donating blood, it is important to rest for a few minutes and enjoy some snacks and drinks provided at the donation site.',
+      content: 'After donating blood, it is important to rest for a few minutes and enjoy some snacks and drinks provided at the donation site. These refreshments are crucial for replenishing your energy levels and helping your body recover. Make sure to take this time to relax and allow your body to adjust.',
       additionalInfo: 'You may also want to avoid heavy exercise for the rest of the day and ensure to stay hydrated. If you feel faint or dizzy, lie down and elevate your legs.',
     },
     {
@@ -28,15 +27,15 @@ const HealthSafetyInfo = () => {
   };
 
   return (
-    <div className="container mt-4 health-safety-info">
+    <div className="container mt-4 health-safety-info" id='health-safety'>
       <div className="row">
         {cards.map((card, index) => (
-          <div className="col-md-4 mb-4" key={index}> {/* Use Bootstrap grid for responsiveness */}
-            <div className="info-card p-4">
+          <div className="col-md-4 mb-4 d-flex" key={index}> {/* Flexbox container */}
+            <div className="info-card p-4 d-flex flex-column"> {/* Flex column layout */}
               <h3>{card.title}</h3>
               <p>{card.content}</p>
               {expandedCard === index && <p className="additional-info">{card.additionalInfo}</p>}
-              <button onClick={() => toggleExpand(index)} className="read-more-button">
+              <button onClick={() => toggleExpand(index)} className="read-more-button mt-auto">
                 {expandedCard === index ? 'Read Less' : 'Read More'}
               </button>
             </div>

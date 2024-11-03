@@ -20,8 +20,8 @@ const UrgentBloodNeeds = () => {
     };
 
     return (
-        <div className="urgent-blood-needed-container">
-            <h2>Urgent Blood Needed</h2>
+        <div className="urgent-blood-needed-container" id='urgent-needs'>
+            <h2 style={{fontWeight:600, fontSize:30}}>Urgent Blood Needed</h2>
             <div className="search-bar">
                 <input type="text" placeholder="Search for blood type..." />
                 <button><FaSearch /></button>

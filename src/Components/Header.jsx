@@ -3,7 +3,13 @@ import { Navbar, Nav, Dropdown } from 'react-bootstrap';
 const Header = () => {
   return (
     <Navbar bg="light" expand="lg" sticky="top">
-      <Navbar.Brand href="#home">Blood Donation</Navbar.Brand>
+      <Navbar.Brand href="#home">
+        <img 
+          src="./Logo.png"
+          alt="Blood Donation Logo"
+          style={{ width: '150px', height: 'auto' }}
+        />
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
@@ -14,13 +20,10 @@ const Header = () => {
           <Nav.Link href="#health-safety">Health & Safety</Nav.Link>
           <Nav.Link href="#testimonials">Testimonials</Nav.Link>
           <Nav.Link href="#contact">Contact Us</Nav.Link>
-
-          {/* Language Dropdown without Flag Icons */}
           <Dropdown className="language-dropdown ml-3">
-            <Dropdown.Toggle variant="outline-secondary" id="language-dropdown">
+            <Dropdown.Toggle variant="" id="language-dropdown">
               English
             </Dropdown.Toggle>
-
             <Dropdown.Menu>
               <Dropdown.Item href="#/action-1">English</Dropdown.Item>
               <Dropdown.Item href="#/action-2">Kiswahili</Dropdown.Item>

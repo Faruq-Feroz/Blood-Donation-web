@@ -1,16 +1,27 @@
 
-
+html {
+    scroll-behavior: smooth;
+  }
+  
 /* Navbar Styles */
 .navbar {
     background-color: #C8102E; /* Deep red background */
-    padding: 20px;
-    margin-left: 30px;
+    padding: 0; /* Set padding to zero to eliminate any spacing */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space between items */
     align-items: center; /* Center items vertically */
     white-space: nowrap; /* Prevent wrapping */
 }
+
+.navbar-brand img {
+    display: block; /* Prevents any inline spacing issues */
+    max-height: 190px; /* Adjust based on your design needs */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    padding-left: 30px;
+}
+
 
 .navbar-brand {
     font-size: 1.5rem; /* Larger font size for the brand name */
@@ -19,15 +30,27 @@
 }
 
 .nav-link {
-    color: #FFFFFF; /* White text for nav links */
+    color: #55035d !important;
     margin: 0 1rem; /* Spacing between links */
     transition: color 0.3s ease; /* Smooth color transition on hover */
 }
+.nav-link:hover{
+    color: red !important;
+}
+
 
 .nav-link:hover {
     color: #F5C3C2; /* Light red color on hover */
 }
 
+.language-dropdown{
+   border: 2px solid purple;
+}
+.language-dropdown:hover{
+    background-color: rgb(190, 6, 190);
+    color: white;
+    transition: ease-in-out 0.1s;
+}
 .navbar-toggler {
     border: none; /* Remove border for a cleaner look */
 }
@@ -43,7 +66,7 @@
 .hero-section {
     padding: 2rem;
     background-color: #f9f9f9;
-    margin-top: 30px;
+    
   }
   
   .hero-left h1 {
@@ -57,14 +80,15 @@
   
   .hero-left h3 {
     font-size: 2.1rem;
-    color: #fc0a0a;
+    color: #fc0a0a !important;
     font-weight: 600;
     margin-bottom: 2rem;
-    margin-left: 25px;
+    margin-left: px;
     
   }
   
   .donate-button {
+    
     padding: 15px 50px !important;
     font-size: 1rem !important;
     color: #fff !important;
@@ -77,7 +101,7 @@
   }
   
   .donate-button:hover {
-    background-color: #a00;
+    background-color: #a00 !important;
   }
   
   .hero-image {
@@ -112,7 +136,8 @@
 
 h2, h3 {
     text-align: center;
-    color: #333; /* Dark text for headings */
+    color: purple !important; /* Dark text for headings */
+    font-weight: 500;
 }
 
 .form-section input[type="text"],
@@ -122,17 +147,21 @@ h2, h3 {
     width: 100%; /* Full width for inputs */
     padding: 10px; /* Padding for inputs */
     margin: 10px 0; /* Margin for spacing */
-    border: 1px solid #ccc; /* Light border */
+    border: 2px solid #ccc; /* Light border */
     border-radius: 5px; /* Rounded corners */
 }
 
 .form-section input[type="submit"] {
-    background-color: #4CAF50; /* Green button color */
+    width: 200px;
+    background-color: rgb(203, 8, 8); /* Button color */
     color: white; /* White text */
     border: none; /* No border */
     cursor: pointer; /* Pointer cursor */
     transition: background-color 0.3s; /* Smooth transition */
+    display: block; /* Ensure it's a block element */
+    margin: 0 auto; /* Center the button */
 }
+
 
 .form-section input[type="submit"]:hover {
     background-color: #45a049; /* Darker green on hover */
@@ -148,6 +177,7 @@ h2, h3 {
     padding: 8px; /* Padding inside table cells */
     border-bottom: 1px solid #ddd; /* Bottom border for cells */
 }
+
 
 #history-table th {
     background-color: #f2f2f2; /* Light grey background for header */
@@ -174,11 +204,10 @@ h2, h3 {
 }
 
 .alert {
-    background-color: #d4edda; /* Light green for alert */
-    color: #155724; /* Dark green for text */
+    background-color: #05fa3e !important; /* Light green for alert */
+    color: #f9fbfa; /* Dark green for text */
     padding: 10px; /* Padding for alert */
     margin-bottom: 10px; /* Space below alert */
-    border: 1px solid #c3e6cb; /* Border for alert */
     border-radius: 5px; /* Rounded corners for alert */
 }
 
@@ -279,7 +308,7 @@ h2, h3 {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 2);
     padding: 20px;
     
 }
@@ -300,14 +329,14 @@ h2, h3 {
 .search-input {
     flex: 1;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     transition: border-color 0.3s;
 }
 
 .search-input:focus {
-    border-color: #4CAF50; /* Change border color on focus */
+    border-color: #410254; /* Change border color on focus */
     outline: none; /* Remove default outline */
 }
 
@@ -315,7 +344,7 @@ h2, h3 {
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #4CAF50;
+    background-color: #56023d;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -329,7 +358,240 @@ h2, h3 {
     background-color: #45a049; /* Darken button on hover */
 }
 
-@media (max-width: 768px) {
+
+  
+
+  .urgent-blood-needed-container {
+    padding: 20px;
+    margin-top: 120px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+   
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #55035d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: rgb(193, 6, 6);
+}
+
+.urgent-requests {
+    margin: 20px 0;
+}
+
+.urgent-request {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.add-request-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-request-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-request-form button {
+    width: 180px; /* Set a specific width that accommodates the text */
+    padding: 10px;
+    background-color: rgb(211, 6, 6); /* Button color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    display: block; /* Make it a block element */
+    margin: 0 auto; /* Center the button */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow if text is too long */
+    text-overflow: ellipsis; /* Show ellipsis if text overflows */
+}
+
+
+
+.add-request-form button:hover {
+    background-color: #45a049;
+}
+
+
+//health
+.health-safety-info {
+    padding: 20px;
+}
+
+.info-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+.card-content {
+    font-size: 1rem; /* Smaller font size */
+    color: #666; /* Softer color for better readability */
+    line-height: 1.6; /* Add line height for spacing */
+    margin-bottom: 10px; /* Space below the content */
+    font-style: italic; /* Optional: gives it a more sophisticated look */
+}
+
+.additional-info {
+    font-size: 1rem; /* Even smaller for additional info */
+    color: #888; /* Slightly lighter color */
+    line-height: 1.5;
+    margin-top: 10px;
+    font-style: normal;
+}
+
+
+.info-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.info-card h3 {
+    color: #C8102E;
+    margin-bottom: 10px;
+}
+
+.additional-info {
+    margin-top: 10px;
+    color: #555;
+}
+
+.read-more-button {
+    background-color: #55035d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 60%;
+    margin: 0 auto; /* Center the button horizontally */
+    margin-top: auto;
+}
+
+
+.read-more-button:hover {
+    background-color: #45a049;
+}
+
+
+  
+  
+
+  .testimonials-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center; /* Center the text */
+    margin-top: 100px;
+  }
+  
+  .testimonials {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .donors{
+    padding-bottom: 40px;
+    font-size: 2.5rem !important;
+    font-weight: 700px !important;
+  }
+  
+  .testimonial-card {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .testimonial-card img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px; /* Space below the image */
+  }
+  
+  .role {
+    font-style: italic;
+    color: #777;
+  }
+  
+  .rating {
+    color: gold; /* Adjust as needed for styling */
+    font-size: 30px;
+  }
+
+  @media (max-width:767px){
+    .hero-image {
+        max-width: 100%; /* Ensure image never overflows */
+        max-height: 300px; /* Limit image height */
+        width: auto;
+        height: auto;
+        object-fit: cover; /* Ensures the image scales nicely */
+        border-radius: 8px;
+      }
+      .hero-left h1 {
+        font-size: 1.9rem;
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #55035d;
+margin-top: 20px;
+        
+      }
+      .hero-left h3 {
+        font-size: 1.4rem;
+        color: #fc0a0a;
+        font-weight: 600;
+        margin-bottom: 2rem;
+       
+        
+      }
+      .section-headings{
+        font-size: 30px !important;
+        
+    }
+    .donors{
+        font-size: 2rem !important;
+    }
+
+  }
+
+  @media (max-width: 768px) {
     .blood-search-container {
         padding: 15px;
         margin: 10px;
@@ -376,228 +638,13 @@ h2, h3 {
     .nav-link {
       margin: 0 0.5rem; /* Less spacing on smaller screens */
     }
-  }
-  
-
-  .urgent-blood-needed-container {
-    padding: 20px;
-    margin-top: 120px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-.search-bar {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.search-bar input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    flex: 1;
-}
-
-.search-bar button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.search-bar button:hover {
-    background-color: #45a049;
-}
-
-.urgent-requests {
-    margin: 20px 0;
-}
-
-.urgent-request {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.add-request-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.add-request-form input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.add-request-form button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.add-request-form button:hover {
-    background-color: #45a049;
-}
-
-
-//health
-.health-safety-info {
-    padding: 20px;
-  }
-  
-  .info-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
-  }
-  
-  .info-card:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .info-card h3 {
-    color: #C8102E;
-    margin-bottom: 10px; /* Space between title and content */
-  }
-  
-  .additional-info {
-    margin-top: 10px;
-    color: #555;
-  }
-  
-  .read-more-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%; /* Full width button */
-  }
-  
-  .read-more-button:hover {
-    background-color: #45a049;
-  }
-  
-
-  .testimonials-container {
-    padding: 20px;
-    background-color: #f9f9f9;
-    text-align: center; /* Center the text */
-  }
-  
-  .testimonials {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .testimonial-card {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-  }
-  
-  .testimonial-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .testimonial-card img {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px; /* Space below the image */
-  }
-  
-  .role {
-    font-style: italic;
-    color: #777;
-  }
-  
-  .rating {
-    color: gold; /* Adjust as needed for styling */
-  }
-
-
-  .contact-form-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #C8102E; /* Use your brand color */
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-control {
-    border-radius: 5px;
-    border: 1px solid #ced4da; /* Light grey border */
-    transition: border-color 0.3s;
-  }
-  
-  .form-control:focus {
-    border-color: #C8102E; /* Change border color on focus */
-    box-shadow: 0 0 5px rgba(200, 16, 46, 0.5); /* Slight shadow on focus */
-  }
-  
-  .submit-button {
-    width: 100%; /* Full width button */
-    padding: 10px; /* More padding for comfort */
-    font-weight: bold; /* Make button text bold */
-    transition: background-color 0.3s;
-  }
-  
-  .submit-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-  }
-  
-
-
-footer h5 {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-footer ul {
-  padding-left: 0;
-}
-
-footer ul li {
-  margin-bottom: 10px;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #ccc;
-}
     
+  }
+
+
+ 
+
+
+
+
 

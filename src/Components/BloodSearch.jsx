@@ -11,7 +11,7 @@ const BloodSearch = () => {
     };
 
     return (
-        <div className="blood-search-container">
+        <div className="blood-search-container" id='find-blood'>
             <h2>Search for Blood Donors</h2>
             <div className="search-input-container">
                 <input 

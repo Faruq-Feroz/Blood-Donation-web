@@ -38,7 +38,7 @@ const AppointmentForm = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container" id='appointment'>
             <div className="form-section">
                 <h2>Make an Appointment</h2>
                 {alertVisible && (
@@ -86,7 +86,8 @@ const AppointmentForm = () => {
                         </tbody>
                     </table>
                 ) : (
-                    <p>No appointments added yet.</p>
+                    <p style={{ textAlign: 'center' }}>No appointments added yet.</p>
+
                 )}
             </div>
         </div>

@@ -1,63 +1,50 @@
+// Footer.jsx
 
+
+import { FaFacebookF, FaTwitter, FaGoogle, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FiHome, FiMail, FiPhone } from 'react-icons/fi';
 
 const Footer = () => {
   return (
-    <footer className=" py-5">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4">
-            <h5>About</h5>
-            <p>
-              We are a non-profit organization dedicated to promoting blood
-              donation and saving lives.
-            </p>
-          </div>
-          <div className="col-md-4">
-            <h5>Quick Links</h5>
-            <ul className="list-unstyled">
-              <li>
-                <a href="#" className="text-light">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-light">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-light">
-                  Donate Blood
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-light">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-md-4">
-            <h5>Contact</h5>
-            <ul className="list-unstyled">
-              <li>
-                <i className="fas fa-map-marker-alt me-2"></i>123 Main Street,
-                City, State
-              </li>
-              <li>
-                <i className="fas fa-phone me-2"></i>+1 (555) 123-4567
-              </li>
-              <li>
-                <i className="fas fa-envelope me-2"></i>info@blooddonation.org
-              </li>
-            </ul>
-          </div>
+    <footer className="footer-wrapper">
+      <section className="footer-social">
+        <span>Get connected with us on social networks:</span>
+        <div className="social-links">
+          <a href="#!" className="social-icon"><FaFacebookF /></a>
+          <a href="#!" className="social-icon"><FaTwitter /></a>
+          <a href="#!" className="social-icon"><FaGoogle /></a>
+          <a href="#!" className="social-icon"><FaInstagram /></a>
+          <a href="#!" className="social-icon"><FaLinkedin /></a>
+          
         </div>
-        <div className="row mt-3">
-          <div className="col-md-12 text-center">
-            <p>&copy; 2023 Blood Donation. All rights reserved.</p>
-          </div>
+      </section>
+      <section className="footer-content">
+        <div className="footer-column">
+          <h6>Blood Link</h6>
+          <p>We are committed to saving lives through blood donation drives and awareness campaigns.</p>
         </div>
+        <div className="footer-column">
+          <h6>Programs</h6>
+          <a href="#!" className="footer-link">Donation App</a>
+          <a href="#!" className="footer-link">Events</a>
+          <a href="#!" className="footer-link">Volunteer Program</a>
+        </div>
+        <div className="footer-column">
+          <h6>Useful Links</h6>
+          <a href="#!" className="footer-link">Your Account</a>
+          <a href="#!" className="footer-link">Donate Blood</a>
+          <a href="#!" className="footer-link">Find a Center</a>
+          <a href="#!" className="footer-link">Help</a>
+        </div>
+        <div className="footer-column">
+          <h6>Contact</h6>
+          <p><FiHome /> Nairobi, Kenya</p>
+          <p><FiMail /> info@bloodlink.com</p>
+          <p><FiPhone /> +254 712 345 678</p>
+        </div>
+      </section>
+      <div className="footer-copyright">
+        © {new Date().getFullYear()} Blood Link. All rights reserved Developed by Hassan.
       </div>
     </footer>
   );

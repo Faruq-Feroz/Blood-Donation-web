@@ -27,10 +27,10 @@ const Hero = () => {
         <Col md={6} className="hero-left order-md-1 order-2">
           <h1>Save Lives, Donate Blood</h1>
           <h3>Your donation can make a difference</h3>
-          <Button className="donate-button">Donate</Button>
+          <Button className="donate-button" href='#appointment'>Donate</Button>
         </Col>
         <Col md={6} className="hero-right order-md-2 order-1 d-flex justify-content-center">
-          <img src={images[currentImage]} alt="Blood Donation" className="hero-image" />
+          <img src={images[currentImage]} alt="Blood Donation" className="hero-image"/>
         </Col>
       </Row>
     </Container>
