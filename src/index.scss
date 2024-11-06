@@ -386,14 +386,15 @@ h2, h3 {
 
   
 
-  .urgent-blood-needed-container {
+   /* Main container styling */
+.urgent-blood-needed-container {
     padding: 20px;
     margin-top: 120px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-   
 }
 
+/* Search bar styling */
 .search-bar {
     display: flex;
     margin-bottom: 20px;
@@ -406,18 +407,6 @@ h2, h3 {
     flex: 1;
 }
 
-.search-bar button {
-    padding: 10px;
-    background-color: #55035d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.search-bar button:hover {
-    background-color: rgb(193, 6, 6);
-}
 
 /* Left column - Add Request Form */
 .add-request-form {
@@ -488,6 +477,26 @@ h2, h3 {
     background-color: #c0392b;
 }
 
+
+.search-bar button {
+    padding: 10px;
+    background-color: #55035d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: rgb(193, 6, 6);
+}
+
+/* Flex container for two-column layout */
+.content-container {
+    display: flex;
+    flex-direction: column; /* Stack in single column on small screens */
+    gap: 20px;
+}
 
 
 
