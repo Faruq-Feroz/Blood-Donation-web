@@ -1,13 +1,34 @@
-import  { useState } from 'react';
-import { FaSearch } from 'react-icons/fa'; // Importing the search icon from react-icons
-
+import { useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
 
 const BloodSearch = () => {
     const [searchTerm, setSearchTerm] = useState('');
+    const [filteredResults, setFilteredResults] = useState([]);
+
+    const donors = [
+        { name: 'Hassan Faruq', bloodType: 'A+', location: 'Nairobi' },
+        { name: 'Jane Kamau', bloodType: 'O-', location: 'Nakuru' },
+        { name: 'Halima Abdalla', bloodType: 'B+', location: 'Mombasa' },
+        { name: 'Amanda Kyla', bloodType: 'AB+', location: 'Nairobi' },
+        { name: 'Michael Mutiso', bloodType: 'A-', location: 'Makueni' },
+        { name: 'John Chege', bloodType: 'B-', location: 'Kiambu' },
+        { name: 'Peter Omondi', bloodType: 'O+', location: 'Kisumu' },
+        { name: 'Paul Wanjala', bloodType: 'AB-', location: 'Vihiga' },
+    ];
 
     const handleSearch = () => {
-        // Implement your search functionality here
-        console.log("Searching for:", searchTerm);
+        const results = donors.filter(donor =>
+            donor.bloodType.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            donor.location.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredResults(results);
+
+        // Option 2: Automatically clear results after 5 seconds
+        setTimeout(() => setFilteredResults([]), 5000);
+    };
+
+    const clearResults = () => {
+        setFilteredResults([]);
     };
 
     return (
@@ -22,10 +43,42 @@ const BloodSearch = () => {
                     className="search-input" 
                 />
                 <button onClick={handleSearch} className="search-button">
-                    <FaSearch /> {/* Include the search icon here */}
+                    <FaSearch />
                     Search
                 </button>
             </div>
+
+            {/* Display search results */}
+            {filteredResults.length > 0 && (
+                <div className="search-results">
+                    {filteredResults.map((donor, index) => (
+                        <div key={index} className="donor-card">
+                            <h3>{donor.name}</h3>
+                            <p>Blood Type: {donor.bloodType}</p>
+                            <p>Location: {donor.location}</p>
+                        </div>
+                    ))}
+                   <button 
+  onClick={clearResults} 
+  className="clear-button" 
+  style={{
+    backgroundColor: "red", 
+    color: 'white', 
+    padding: '10px 20px', 
+    border: 'none',
+    borderRadius: '5px', 
+    fontSize: '16px', 
+    cursor: 'pointer', 
+    transition: 'background-color 0.3s ease', 
+  }}
+  onMouseOver={(e) => e.target.style.backgroundColor = '#9b4dca'} // Hover effect to a lighter purple
+  onMouseOut={(e) => e.target.style.backgroundColor = '#6a0dad'} // Revert to original purple when hover ends
+>
+  Clear Results
+</button>
+
+                </div>
+            )}
         </div>
     );
 };
