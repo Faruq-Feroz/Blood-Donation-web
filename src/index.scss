@@ -419,24 +419,15 @@ h2, h3 {
     background-color: rgb(193, 6, 6);
 }
 
-.urgent-requests {
-    margin: 20px 0;
-}
-
-.urgent-request {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
+/* Left column - Add Request Form */
 .add-request-form {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
 }
 
 .add-request-form input {
@@ -446,21 +437,16 @@ h2, h3 {
 }
 
 .add-request-form button {
-    width: 180px; /* Set a specific width that accommodates the text */
+    width: 180px;
     padding: 10px;
-    background-color: rgb(211, 6, 6); /* Button color */
-    color: white; /* White text */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    display: block; /* Make it a block element */
-    margin: 0 auto; /* Center the button */
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide overflow if text is too long */
-    text-overflow: ellipsis; /* Show ellipsis if text overflows */
+    background-color: rgb(211, 6, 6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
 }
-
-
 
 .add-request-form button:hover {
     background-color: #45a049;
