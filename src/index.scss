@@ -358,6 +358,31 @@ h2, h3 {
     background-color: #45a049; /* Darken button on hover */
 }
 
+.search-results {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.donor-card {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.donor-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.donor-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
 
   
 
